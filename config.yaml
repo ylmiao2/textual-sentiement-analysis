@@ -1,28 +1,28 @@
 input_path: ./data/toydata.csv
 
 model:
-  name: "bert-base-uncased"
-  max_length: 512
-  num_class: 3
-  device: "cuda"
-
-  # name: "LSTM"
+  # name: "bert-base-uncased"
   # max_length: 512
   # num_class: 3
-  # embedding_dim: 300
-  # hidden_dim: 300
-  # num_layers: 2
-  # bidirectional: true
-  # dropout: 0.5
   # device: "cuda"
+
+  name: "LSTM"
+  max_length: 512
+  num_class: 3
+  embedding_dim: 300
+  hidden_dim: 300
+  num_layers: 2
+  bidirectional: true
+  dropout: 0.5
+  device: "cuda"
 
 train:
   # LSTM
-  # batch_size: 256
-  # num_epochs: 10
-  # learning_rate: 1.0e-4
+  batch_size: 256
+  num_epochs: 10
+  learning_rate: 1.0e-4
 
   # bert
-  batch_size: 32
-  num_epochs: 3
-  learning_rate: 2.0e-5
+  # batch_size: 32
+  # num_epochs: 3
+  # learning_rate: 2.0e-5
